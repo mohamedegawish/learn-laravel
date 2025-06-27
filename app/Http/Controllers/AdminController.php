@@ -15,8 +15,8 @@ class AdminController extends Controller
         return view("test");
     }
     public function addDoctor(){
-       Doctor::factory(100)->create();
-        return redirect("/admin/doctors");
+       Doctor::factory(50)->create();
+       return response("succes ",201);
     }
     public function viewDoctors(){
         $doctors=Doctor::cursorPaginate(5);
