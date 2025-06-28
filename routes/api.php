@@ -1,5 +1,6 @@
 <?php
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\api\PostApiController;
 use Illuminate\Support\Facades\Route;
 
-Route::post("/admin/doctors/new",[AdminController::class,"addDoctor"]);
+Route::apiResource('posts',PostApiController::class);

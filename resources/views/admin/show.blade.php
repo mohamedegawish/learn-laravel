@@ -3,6 +3,7 @@
         <ul>
             @foreach ($Customer->projects as $project)
                 <li>{{$project->projectName}}</li>
+                
             @endforeach
         </ul>
 

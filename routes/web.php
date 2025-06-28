@@ -1,8 +1,10 @@
 <?php
 
 use App\Http\Controllers\CourseController;
+use App\Http\Controllers\CommentController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\CustomerController;
+use App\Http\Controllers\PostController;
 use App\Http\Controllers\ProjectController;
 use App\Http\Controllers\StudentsController;
 use Illuminate\Support\Facades\Route;
@@ -22,3 +24,5 @@ Route::get("/admin/programs",[AdminController::class,"viewPrograms"]);
 Route::get("/admin/programs/new",[AdminController::class,"addProgram"]);
 Route::get("/admin/programs/testmany",[AdminController::class,"testMany"]);
 Route::resource("admin/students",StudentsController::class);
+Route::resource("/posts",PostController::class);
+Route::resource("posts/comment",CommentController::class);
